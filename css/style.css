@@ -1,0 +1,281 @@
+@charset "UTF-8";
+a{
+	text-decoration:none;/*去掉a标签下划线*/
+}
+body,ul,li{
+	/* 初始化使body本身的框与设置的div相重合 */
+	margin:0px;
+	padding:0px;
+}
+body{
+	height: 1000px;/*在右侧加上一个滑动条*/
+	font:sans-serif;
+	/* font-size: 10px; */
+	background: url(../img/background.jpg);
+}
+ul{
+	list-style-type: none;/*取消掉ul前面那个点*/
+}
+.topbar{
+	background:#333;
+	height:40px;
+}
+.container{
+	/* 让div居中 */
+	margin:0px auto;
+	width:1000px;
+}
+
+.container::before,.container::after
+.clearfix::before,.clearfix::after{
+	/* 为了取消掉与topbar的重叠 */
+	content:"";
+	display: table;
+}
+.container::after,.clearfix::after{
+	clear: both;
+}
+.topbar a{
+	color: #b0b0b0;
+	font-size:12px;
+	margin-left: 3px;
+}
+.topbar a:hover {
+	color:#fff;
+}
+.topbar-message{
+	float:left;
+	height:40px;
+	line-height:40px;
+	font-size: 0;
+}
+.topbar-message span{
+	font-size: 12px;
+	color:#424242;
+	font-family: sans-serif;
+	margin-left: 3px;
+}
+.topbar-info {
+	float: right;
+	margin-right:15px;
+}
+.topbar-reset a{
+	float: right;
+	display: block;
+	height:40px;
+	line-height: 40px;
+	text-align: center;
+	width:80px;
+	background-color: #424242;
+}
+
+.topbar-reset a:hover{
+	background-color: #fff;
+	color: #ff6700;
+}
+
+.topbar-info a{
+	float: left;
+	padding:0.5px;
+	line-height: 40px;
+	height: 40px;
+
+}
+.topbar-info span{
+	float:left;
+	font-family: sans-serif;
+	font-size: 12px;
+	color:#424242;
+	height: 40px;
+	line-height: 40px;
+}
+ .topbar-info .sep{
+	padding: 0 20px;
+} 
+
+.header{
+	height:100px;
+}
+.header-logo{
+	float: left;
+	width: 62px;
+	height: 55px;
+	margin-top: 22px;
+	/* border: 1px solid black; */
+}
+
+.header-nav{
+	float: left;
+	width: 620px;
+	height: 100px;
+	line-height: 100px;
+	margin-left:40px;
+	/* border: 1px solid black; */
+}
+
+.header-nav .nav-list{
+	width: 820px;
+	height: 88px;
+	font-size: 16px;
+	padding: 0 0 0 36px;
+}
+
+.header-nav .nav-list .nav-categroy{
+	float:left;
+	width: 88px;
+}
+.header-nav .nav-list .nav-categroy a{
+	color:#fff;
+	display:block;
+	padding: 0 0 36px;
+	text-align: right;
+
+}
+.header-nav .nav-list .nav-item{
+	float:left;
+}
+.header-nav .nav-list .nav-item a{
+	display:block;
+	padding:0px 10px 36px;
+	color:#fff; 
+}
+.header-nav .nav-list .nav-item a:hover{
+	color:#ff6700;
+}
+.header-search{
+	float: right;
+	width:250px;
+	height: 50px;
+	margin-top: 25px;
+	/* border: 1px solid black; */
+}
+
+.header-search .search-form{
+	position: relative;
+	display: block;
+	width: 296px;
+	height: 50px;
+}
+
+.header-search .search-form .search-text{
+	position: absolute;
+	top:0;
+	right:40px;
+	display: block;
+	width:245px;
+	height:40px;
+	line-height: 40px;
+	border:1px solid #e0e0e0;
+	outline:0;
+}
+.header-search .search-form .search-btn{
+	position: absolute;
+	top:0;
+	right: 0;
+	display:block;
+	width:42px;
+	height:38x;
+	line-height: 38px;
+	border:1px solid #e0e0e0;
+	font-size:12px;
+	color:#616161;
+	background: url("../img/search3.png") no-repeat center;
+	outline:0;
+}
+.header-search .search-form .search-bnt:hover{
+	background-color: #ff6700;
+	color:#333;
+}
+
+.look {
+	background-color: rgb(196, 193, 190);
+}
+.look a{
+	color: rgb(110, 105, 105);
+}
+.look a:hover{
+	color:white;
+}
+#abslute {
+	/* background-color: rgb(197, 190, 182); */
+	width: 80px;
+	height: 110px;
+	font-size: 20px;
+	position: fixed;
+	left: 50px;
+	top:250px;
+	font-size: 15px;
+}
+#abslute a {
+	display: block;
+	text-align: center;
+	line-height: 30px;
+	margin-top:5px;
+	background-color: #8cb5dd;
+
+}
+
+.look_head {
+	margin-top: 19px;
+	/* height: 140px; */
+	background-color: rgb(196, 193, 190);
+	/* background: url(../img/pop.jpg) no-repeat center; */
+}
+.look_nav {
+	margin-top: -68px 0 22px;
+}
+.look_nav ul{
+	height: 68px;
+	background: #8cb5dd;
+
+}
+.look_nav li {
+	display:block;
+	float: left;
+	color: #fff;
+	width: 16.6%;
+	height: 68px;
+	line-height: 68px;
+	font-size: 16px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.look_goods ul {
+	margin-top: 20px;
+	margin-left:20px;
+
+	/* border: 1px solid black; */
+}
+
+.look_goods li{
+	float: left;
+	width: 225px;
+	height: 338px;
+	background-color: #333;
+	/* border: solid black; */
+	margin-right:20px;
+	margin-bottom: 20px; 
+
+}
+#footer {
+	position: absolute;
+	width: 100%;
+	margin-top:1200px;
+	background-color: #333;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	color: #b0b0b0;
+}
+#footer ul li{
+	display: inline-block;
+	position: relative;
+	margin-left: 15px;
+}
+#footer a{
+	color: rgb(110, 105, 105);
+}
+#footer a:hover {
+	color: white;
+}
